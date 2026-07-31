@@ -19,6 +19,7 @@ def obtener_america_tv():
     return None
 
 CANALES_ESTABLES = {
+    "America": "https://live-evg1.tv360.bitel.com.pe/bitel/americatv/playlist.m3u8",
     "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
     "France 24 Español": "https://static.france24.com/live/F24_ES_LO_HLS/live_web.m3u8"
 }
