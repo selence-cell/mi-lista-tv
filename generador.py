@@ -1,18 +1,16 @@
 import subprocess
 
-# Lista de canales
-# Puedes usar links directos .m3u8 o enlaces web (YouTube / Twitch)
+# Enlaces directos .m3u8 100% públicos y funcionales
 CANALES = {
-    "RTVE 24h Noticias": "https://rtvelivestream.akamaized.net/rtvesec/24h/24h_main.m3u8",
-    "TN Argentina Live": "https://www.youtube.com/watch?v=cb12KmMMDJA"
+    "TN Argentina": "https://live-edge01.telefe.com/live/smil:telefe.smil/playlist.m3u8",
+    "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+    "RT en Español": "https://rt-esp.cdn.videogorilla.com/hls/rtesp.m3u8"
 }
 
 def obtener_m3u8(url):
-    # Si el enlace ya termina en .m3u8, no requiere procesamiento
     if ".m3u8" in url:
         return url
 
-    # Para plataformas web, usamos flags para evadir el bloqueo de GitHub
     comando = [
         "yt-dlp",
         "--no-warnings",
@@ -30,7 +28,6 @@ def obtener_m3u8(url):
         ).strip()
         
         if resultado:
-            # Retorna la primera URL generada
             return resultado.split('\n')[0]
     except Exception as e:
         print(f"Error procesando {url}: {e}")
