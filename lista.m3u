@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 group-title="Canales" tvg-name="América TV Perú", América TV Perú
+https://pe-p4-p-e-cx1.cdn.mdstrm.com/live-stream-secure/6099b04d9418ac082441dd74/publish/playlist.m3u8
 #EXTINF:-1 group-title="Canales" tvg-name="DW Español", DW Español
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
 #EXTINF:-1 group-title="Canales" tvg-name="France 24 Español", France 24 Español
