@@ -1,3 +1,7 @@
 #EXTM3U
 #EXTINF:-1 group-title="Canales" tvg-name="DW Español", DW Español
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
+#EXTINF:-1 group-title="Canales" tvg-name="TN Argentina", TN Argentina
+https://live-edge01.telefe.com/live/smil:telefe.smil/playlist.m3u8
+#EXTINF:-1 group-title="Canales" tvg-name="RT en Español", RT en Español
+https://rt-esp.cdn.videogorilla.com/hls/rtesp.m3u8
