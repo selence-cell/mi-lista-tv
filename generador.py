@@ -1,9 +1,8 @@
 import subprocess
 
-# Enlaces directos .m3u8 100% públicos y funcionales
 CANALES = {
-    "TN Argentina": "https://live-edge01.telefe.com/live/smil:telefe.smil/playlist.m3u8",
     "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+    "TN Argentina": "https://live-edge01.telefe.com/live/smil:telefe.smil/playlist.m3u8",
     "RT en Español": "https://rt-esp.cdn.videogorilla.com/hls/rtesp.m3u8"
 }
 
@@ -21,12 +20,7 @@ def obtener_m3u8(url):
     ]
     
     try:
-        resultado = subprocess.check_output(
-            comando,
-            text=True,
-            stderr=subprocess.DEVNULL
-        ).strip()
-        
+        resultado = subprocess.check_output(comando, text=True, stderr=subprocess.DEVNULL).strip()
         if resultado:
             return resultado.split('\n')[0]
     except Exception as e:
