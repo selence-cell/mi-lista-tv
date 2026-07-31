@@ -3,8 +3,8 @@ import os
 
 # 1. Agrega aquí tus canales y enlaces normales de páginas web
 CANALES = {
-    "Canal Ejemplo 1": "https://www.youtube.com/watch?v=5qap5aO4i9A",  # Sustituye por tu video/transmisión
-    "Canal Ejemplo 2": "https://www.twitch.tv/lofi_girl"             # Sustituye por tu canal de Twitch
+    "Canal Ejemplo 1": "https://www.youtube.com/watch?v=X4VbdwhkE10",  # Sustituye por tu video/transmisión
+    "Canal Ejemplo 2": "https://tvgo.americatv.com.pe/?utm_content=&utm_term="             # Sustituye por tu canal de Twitch
 }
 
 def obtener_m3u8(url):
