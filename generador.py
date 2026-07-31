@@ -2,25 +2,32 @@ import subprocess
 
 CANALES = {
     "América TV Perú": "https://tvgo.americatv.com.pe/",
-    "France 24 Español": "https://static.france24.com/live/F24_ES_LO_HLS/live_web.m3u8",
-    "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
+    "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+    "France 24 Español": "https://static.france24.com/live/F24_ES_LO_HLS/live_web.m3u8"
 }
 
 def obtener_m3u8(url):
-    if ".m3u8" in url:
+    # Si ya es un enlace m3u8 directo, devolverlo
+    if ".m3u8" in url and "americatv.com.pe" not in url:
         return url
 
     comando = [
         "yt-dlp",
         "--no-warnings",
         "--format", "best",
+        "--referer", "https://tvgo.americatv.com.pe/",
         "--user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "-g",
         url
     ]
     
     try:
-        resultado = subprocess.check_output(comando, text=True, stderr=subprocess.DEVNULL).strip()
+        resultado = subprocess.check_output(
+            comando,
+            text=True,
+            stderr=subprocess.DEVNULL
+        ).strip()
+        
         if resultado:
             return resultado.split('\n')[0]
     except Exception as e:
