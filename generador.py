@@ -29,7 +29,7 @@ def main():
         direct_link = obtener_m3u8(url_web)
         
         if direct_link:
-            m3u_content += f'#EXTINF:-1 tvg-name="{nombre}", {nombre}\n{direct_link}\n'
+            m3u_content += f'#EXTINF:-1 group-title="Canales" tvg-name="{nombre}", {nombre}\n{direct_link}\n'
         else:
             print(f"No se pudo extraer el enlace de {nombre}")
 
