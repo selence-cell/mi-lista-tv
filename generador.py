@@ -2,8 +2,8 @@ import subprocess
 
 CANALES = {
     "DW Español": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
-    "TN Argentina": "https://live-edge01.telefe.com/live/smil:telefe.smil/playlist.m3u8",
-    "RT en Español": "https://rt-esp.cdn.videogorilla.com/hls/rtesp.m3u8"
+    "France 24 Español": "https://static.france24.com/live/F24_ES_LO_HLS/live_web.m3u8",
+    "Euronews Español": "https://euronews-euronews-spanish-1-us.lg.wurl.tv/playlist.m3u8"
 }
 
 def obtener_m3u8(url):
